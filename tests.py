@@ -39,6 +39,11 @@ class TestCase(unittest.TestCase):
         input = 'akshUY@O+'
         self.assertFalse(check_pwd(input))
 
+    # Password with all criteria met, should return True
+    def test10(self):
+        input = '@3*UYhj89'
+        self.assertTrue(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()
