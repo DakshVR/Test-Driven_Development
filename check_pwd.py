@@ -4,13 +4,16 @@ def check_pwd(pwd):
 
     lower_case = False
     upper_case = False
+    digit = False
     for character in pwd:
         if character.islower():
             lower_case = True
         elif character.isupper():
             upper_case = True
+        elif character.isdigit():
+            digit = True
 
-    if (lower_case and upper_case) == False:
+    if (lower_case and upper_case and digit) == False:
         return False
 
     return True
