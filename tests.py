@@ -19,6 +19,11 @@ class TestCase(unittest.TestCase):
         input = 'ASDFGHIP'
         self.assertFalse(check_pwd(input))
 
+    # Password with one lowercase character should pass
+    def test4(self):
+        input = 'aWRSTYUIP'
+        self.assertTrue(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()
