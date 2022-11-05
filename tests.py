@@ -34,6 +34,11 @@ class TestCase(unittest.TestCase):
         input = '12345t78U8'
         self.assertTrue(check_pwd(input))
 
+    # Password with no digit should Fail
+    def test7(self):
+        input = 'rtyuijkuUIO'
+        self.assertFalse(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()
