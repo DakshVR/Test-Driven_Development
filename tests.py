@@ -25,9 +25,14 @@ class TestCase(unittest.TestCase):
         self.assertTrue(check_pwd(input))
 
     # Password with no uppercase character should Fail
-    def test3(self):
-        input = 'ertyuiolkp'
+    def test5(self):
+        input = 'erqyuiolkp'
         self.assertFalse(check_pwd(input))
+
+    # Password with one uppercase character and one lower case character, should Pass
+    def test6(self):
+        input = '12345t78U8'
+        self.assertTrue(check_pwd(input))
 
 
 if __name__ == '__main__':
