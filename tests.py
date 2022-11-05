@@ -9,6 +9,11 @@ class TestCase(unittest.TestCase):
         input = '123gt6'
         self.assertFalse(check_pwd(input))
 
+    # Password with length more than 20, length 22
+    def test2(self):
+        input = 'at567yhjuliokjuy6785ft'
+        self.assertFalse(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()
