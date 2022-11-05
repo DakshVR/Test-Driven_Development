@@ -29,6 +29,11 @@ class TestCase(unittest.TestCase):
         input = 'rtyuijkuUIO'
         self.assertFalse(check_pwd(input))
 
+    # Password with no symbols should Fail
+    def test8(self):
+        input = 'Asgt67hU89'
+        self.assertFalse(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()
