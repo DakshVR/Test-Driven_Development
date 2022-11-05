@@ -19,20 +19,10 @@ class TestCase(unittest.TestCase):
         input = 'ASDFGHIP'
         self.assertFalse(check_pwd(input))
 
-    # Password with one lowercase character should pass
-    def test4(self):
-        input = 'aWRSTYUIP'
-        self.assertTrue(check_pwd(input))
-
     # Password with no uppercase character should Fail
     def test5(self):
         input = 'erqyuiolkp'
         self.assertFalse(check_pwd(input))
-
-    # Password with one uppercase character and one lower case character, should Pass
-    def test6(self):
-        input = '12345t78U8'
-        self.assertTrue(check_pwd(input))
 
     # Password with no digit should Fail
     def test7(self):
